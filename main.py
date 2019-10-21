@@ -1,3 +1,18 @@
+
+
+def show(a, win):
+    global x, y
+    print('▓' * 13)
+    for i in a:
+        for j in i:
+            if j == 16 and not win:
+                print("▓  ", end='')
+            else:
+                print("▓", j, ' ' * (1 - j // 10), sep='', end='')
+        print('▓')
+        print('▓' * 13)
+ 
+
 def MoveRight():
     global x, y, win, a
     if (not win):
